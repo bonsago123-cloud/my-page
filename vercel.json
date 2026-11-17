@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "functions": {
+    "api/index.mjs": {
+      "includeFiles": ["index.html", "public/**", "node_modules/@simplewebauthn/browser/dist/bundle/**"]
+    }
+  },
+  "rewrites": [ { "source": "/(.*)", "destination": "/api/index.mjs" } ]
+}

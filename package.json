@@ -1,0 +1,22 @@
+{
+  "name": "my-page-task8-passkey-addon",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "기존 bonsago123-cloud/my-page의 HTML 원본을 유지하는 WebAuthn 패스키 확장",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "apply": "node scripts/apply-task8.mjs",
+    "dev": "node --env-file-if-exists=.env src/server.mjs",
+    "start": "node src/server.mjs",
+    "test": "node --test test/core.test.mjs test/integration.test.mjs",
+    "smoke": "node test/smoke.mjs",
+    "check": "node --check src/app.mjs && node --check src/db.mjs && node --check public/passkey.js && node --check scripts/apply-task8.mjs"
+  },
+  "dependencies": {
+    "@simplewebauthn/browser": "^13.2.0",
+    "@simplewebauthn/server": "^13.2.0",
+    "express": "^5.1.0",
+    "pg": "^8.15.0"
+  }
+}

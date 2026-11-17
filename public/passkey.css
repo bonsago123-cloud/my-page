@@ -1,0 +1,38 @@
+/* 과제 8 전용 확장. 원본 index.html의 클래스·규칙을 덮어쓰지 않습니다. */
+.task8 { margin:28px 0 38px; padding:25px; background:var(--surface,#fff); border:2px solid var(--line,#d9e2ec); border-radius:20px; }
+.task8 * { box-sizing:border-box; }
+.task8-heading { border-bottom:1px solid var(--line,#d9e2ec); padding-bottom:16px; margin-bottom:16px; }
+.task8-heading h2 { font-size:clamp(1.4rem,3vw,2rem); margin:4px 0 8px; }
+.task8-heading p { margin:4px 0; color:var(--muted,#52606d); }
+.task8-kicker { font-size:.85rem; font-weight:800; color:var(--accent-strong,#084c91) !important; letter-spacing:.08em; }
+.task8-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:12px 0; }
+.task8-card { border:1px solid var(--line,#d9e2ec); background:var(--bg,#f7f9fc); padding:16px; border-radius:14px; min-width:0; }
+.task8-card h3 { margin:0 0 8px; font-size:1.1rem; }
+.task8-card p { color:var(--muted,#52606d); margin:5px 0 12px; }
+.task8 form { display:grid; gap:9px; margin-top:14px; }
+.task8 label { font-weight:700; }
+.task8 input { width:100%; padding:10px 12px; border:1px solid var(--line,#d9e2ec); border-radius:8px; font:inherit; }
+.task8 input:focus-visible { outline:3px solid var(--focus,#8a2be2); outline-offset:2px; }
+.task8 button { background:var(--accent,#0b6bcb); color:#fff; border:0; border-radius:8px; padding:10px 12px; cursor:pointer; font:inherit; font-weight:700; }
+.task8 button:focus-visible { outline:3px solid var(--focus,#8a2be2); outline-offset:2px; }
+.task8 button:disabled { background:#7d8995; cursor:not-allowed; }
+.task8 .task8-delete { background:#b32525; margin-left:auto; }
+.task8-message { border:1px solid #a9cafa; background:#eef6ff; padding:11px 14px; border-radius:10px; color:#084c91; overflow-wrap:anywhere; }
+.task8-message.is-error { border-color:#dfb4b4; background:#fff1f1; color:#7e1c1c; }
+.task8-message.is-success { border-color:#98d0b5; background:#f1fff7; color:#14623a; }
+.task8-userline { display:flex; align-items:center; justify-content:space-between; gap:14px; }
+.task8-userline h3 { margin:0 0 4px; }
+.task8-userline p { margin:0; color:var(--muted,#52606d); }
+.task8-record { padding:12px; background:#fff; border:1px solid var(--line,#d9e2ec); border-radius:10px; margin:8px 0; }
+.task8-record h4 { margin:0 0 4px; }
+.task8-record p { margin:0; overflow-wrap:anywhere; }
+.task8-keyrow { display:flex; gap:10px; align-items:center; border-bottom:1px solid var(--line,#d9e2ec); padding:10px 0; }
+.task8-keyrow strong { display:block; }
+.task8-keyrow small { color:var(--muted,#52606d); display:block; }
+.task8-keyrow button { margin-left:auto; }
+.task8-keydetails { margin:5px 0 12px; font-size:.85rem; }
+.task8-keydetails code { display:block; padding:7px; border:1px solid var(--line,#d9e2ec); background:#fff; word-break:break-all; }
+.task8 .task8-note { margin:15px 0 0; color:var(--muted,#52606d); font-size:.9rem; }
+.task8 #task8-userid { word-break:break-all; }
+.task8 [hidden] { display:none !important; }
+@media(max-width:700px) { .task8 { padding:16px; } .task8-grid { grid-template-columns:1fr; } .task8-userline { align-items:flex-start; flex-direction:column; } }
