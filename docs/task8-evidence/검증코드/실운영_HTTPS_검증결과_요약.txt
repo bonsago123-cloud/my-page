@@ -1,0 +1,16 @@
+실운영 검증 결과 요약 2026-11-18
+대상: https://my-page-passkey-chan2-efc7.vercel.app
+실행: Vercel Sandbox Node 22, 실제 ECDSA P-256 / SHA256 서명, 서버의 실제 WebAuthn 검증
+계정 A: t8test-a-e89497c1
+계정 B: t8test-b-e89497c1
+결과: outcome=PASS, process exit=0
+등록 옵션: 200/200, 등록 검증: 201/201
+A 자신의 자료 200(3건), A→B 명시 주소 403
+B 자신의 자료 200(3건), B→A 명시 주소 403
+쿼리 accountId 변조시 각각 자기 자료만 반환 HTTP 200(3건)
+인증 옵션 두 차례 HTTP 200/200, 챌린지 불일치 확인
+정상 서명 로그인 HTTP 200, 동일 티켓 재사용 HTTP 409
+서명 변조 HTTP 401, 마지막 패스키 삭제 HTTP 409
+로그아웃 HTTP 200, 과거 세션 재사용 HTTP 401, 무인증 비공개 접근 HTTP 401
+실행 참조: sbx_7S0qxAUfo6OcGa5WSNaYH81Z0zxA / cmd_8fbe5f6fe10c4888aedf9c4a4648
+주의: 긴 원격 로그가 일부 잘려 요약에 적힌 결과가 원시 HTTP 패킷 전체의 보관을 뜻하지는 않음. 개인키·세션·티켓 원문은 비포함.
